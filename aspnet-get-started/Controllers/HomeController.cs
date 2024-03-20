@@ -13,6 +13,13 @@ namespace aspnet_get_started.Controllers
             return View();
         }
 
+        public ActionResult db_test()
+        {
+            ViewBag.Message = "DB test page.";
+        
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
