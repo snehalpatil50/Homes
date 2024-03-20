@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "DB Test";
+}
+<div class="row">
+    <div class="col-md-4">
+        <h2>Dodaj wpis do bazy danych</h2>
+        <form action="/DodajWpis" method="post">
+            <div class="form-group">
+                <label for="inputWpis">Wprowadź wpis:</label>
+                <input type="text" class="form-control" id="inputWpis" name="inputWpis">
+            </div>
+            <button type="submit" class="btn btn-primary">Dodaj wpis</button>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h2>Szukaj w bazie danych</h2>
+        <form action="/SzukajWartosci" method="post">
+            <div class="form-group">
+                <label for="inputSzukanaWartosc">Podaj wartość:</label>
+                <input type="text" class="form-control" id="inputSzukanaWartosc" name="inputSzukanaWartosc">
+            </div>
+            <button type="submit" class="btn btn-primary">Szukaj</button>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h2>Wynik wyszukiwania</h2>
+        <div id="wynikWyszukiwania"></div>
+    </div>
+</div>
