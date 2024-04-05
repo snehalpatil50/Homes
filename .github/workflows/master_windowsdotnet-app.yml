@@ -62,5 +62,5 @@ jobs:
         with:
           app-name: 'windowsdotnet-app'
           slot-name: 'Production'
-          package: .
+          package: ./aspnet-get-started.sln
           
