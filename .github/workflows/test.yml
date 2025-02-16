@@ -17,3 +17,5 @@ jobs:
     with:
       SOLUTION_FILE: 'aspnet-get-started.sln'
       BUILD_DIR: '_build'
+
+      

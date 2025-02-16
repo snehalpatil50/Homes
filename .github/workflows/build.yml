@@ -54,3 +54,24 @@ jobs:
           name: ${{ env.PACKAGE_NAME }}
           path: ./${{ env.PACKAGE_NAME }}
           if-no-files-found: error
+  release_versioning:
+      name: Release Versioning
+      needs: build_project
+      permissions: 
+           contents: read
+           pull-requests: read
+
+      uses: ./.github/workflows/release_versioning.yml
+      secrets: inherit
+          
+  tag_n_release:
+      needs: release_versioning
+      permissions:
+              contents: write
+      name: Tag and create release
+      uses: ./.github/workflows/tag_n_release.yaml
+      with:
+          ARTIFACT_NAME: "${{ github.sha }}.zip"
+        
+            
+               
